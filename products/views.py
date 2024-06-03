@@ -4,21 +4,25 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    context = {'title': 'Kompick',}
+    context = {'title': 'Kompick', }
     return render(request, 'products/index.html', context)
 
 
-def products(request):
-    return render(request, 'products/products.html')
-
-
 def laptops(request):
-    return render(request, 'products/laptops.html')
+    context = {'title': 'Ноутбуки', }
+    return render(request, 'products/laptops.html', context)
 
 
 def computers(request):
-    return render(request, 'products/computers.html')
+    context = {'title': 'Компьютеры', }
+    return render(request, 'products/computers.html', context)
 
 
 def services(request):
-    return render(request, 'products/services.html')
+    context = {'title': 'Услуги', }
+    return render(request, 'products/services.html', context)
+
+
+def products(request):
+    context = {'title': 'Все категории', }
+    return render(request, 'products/products.html', context)
