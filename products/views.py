@@ -4,7 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, 'products/index.html')
+    context = {'title': 'Kompick',}
+    return render(request, 'products/index.html', context)
 
 
 def products(request):
